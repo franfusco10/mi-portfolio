@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="trabajos">
+
+    <!-- Barra de navegación Bootstrap -->
+
+    <section class="presentación" id="inicio">
+
+        <nav class="navbar navbar-expand-xl navbar-dark mi-nav-personalizada">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html#habilidades">Habilidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html#trabajos">Trabajos realizados</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html#contacto">Contacto</a></li>
+                    </ul>
+
+                    <div class="nav-social-icons d-flex">
+                        <a href="https://www.linkedin.com/in/franco-fusco-sicardi-04a75636a/" target="_blank">
+                            <img src="img/linkedin.png" alt="LinkedIn" class="icono-linkedin">
+                        </a>
+                        <a href="https://www.behance.net/francofuscos" target="_blank">
+                            <img src="img/Behance.png" alt="Behance" class="icono-behance">
+                        </a>
+                        <a href="https://x.com/fraan_fusco" target="_blank">
+                            <img src="img/Twitter.png" alt="Twitter" class="icono-twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+    <!-- Inicio de página -->
+    <main class="detalle-proyecto">
+        <section class="contenido-proyecto">
+
+            <span class="numero-proyectos">05</span>
+
+            <h1 class="titulo-proyecto">
+                DISEÑO DE
+                <span>PÁGINA</span>
+            </h1>
+
+            <section class="datos-proyecto">
+                <article class="dato">
+                    <span class="etiqueta-dato">Materia</span>
+                    <p class="texto-dato">
+                        <span>DISEÑO</span>
+                        <span>WEB</span>
+                    </p>
+                </article>
+
+                <article class="dato">
+                    <span class="etiqueta-dato">Programa</span>
+                    <p class="texto-dato">
+                        <span>FIGMA</span>
+                    </p>
+                </article>
+
+                <article class="dato">
+                    <span class="etiqueta-dato">Año</span>
+                    <p class="texto-dato">
+                        <span>2025</span>
+                    </p>
+                </article>
+            </section>
+
+            <span class="linea-detalle"></span>
+
+            <section class="texto-proyecto">
+                <p>
+                    Diseño de página web para una tienda de skates realizado en Figma, enfocado en construir una
+                    identidad visual coherente.
+                </p>
+
+                <p>
+                    Se desarrolló una web navegable con acceso a redes sociales y ubicación integrada, aplicando
+                    análisis de diseño para mejorar la experiencia del usuario. El diseño fue desarrollado tanto en su
+                    versión desktop como responsive.
+                </p>
+            </section>
+
+            <section class="vista-previa-proyecto">
+
+                <button class="imagen-proyecto" type="button" data-bs-toggle="modal"
+                    data-bs-target="#modalGaleriaSkate">
+                    <img src="img/imagen-aplicación.png" alt="Proyecto Skate">
+                </button>
+
+                <p class="texto-galeria">
+                    Click en la imagen para ver la galería
+                </p>
+            </section>
+
+        </section>
+    </main>
+
+    <span class="linea-final"></span>
+
+    <!-- Modal más carrusel -->
+
+    <div class="modal fade" id="modalGaleriaSkate" tabindex="-1" aria-labelledby="modalGaleriaSkateLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div id="carouselSkate" class="carousel slide carousel-fade">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/imagen-aplicación.png" class="d-block w-100" alt="Imagen Skate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
