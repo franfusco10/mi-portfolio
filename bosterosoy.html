@@ -163,6 +163,17 @@
                                     alt="Imagen 5 del proyecto bosterosoy">
                             </div>
 
+                            <div class="carousel-item">
+                                <iframe
+                                    class="iframe-figma-modelado"
+                                    width="100%"
+                                    height="600"
+                                    data-src="https://embed.figma.com/proto/NteqBw3p2KgP0CkczzE7QA/BosteroSoy?node-id=2-2&starting-point-node-id=105%3A11&embed-host=share"
+                                    title="Frame de Figma bosterosoy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselBosterosoy"
@@ -185,6 +196,28 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function cargarIframeVisible(slide) {
+          const iframe = slide.querySelector(".iframe-figma-modelado[data-src]");
+          if (iframe && !iframe.getAttribute("src")) {
+            iframe.setAttribute("src", iframe.dataset.src);
+          }
+        }
+        
+        const carrusel = document.getElementById("carouselBosterosoy");
+        
+        if (carrusel) {
+          const slideActivo = carrusel.querySelector(".carousel-item.active");
+          if (slideActivo) {
+            cargarIframeVisible(slideActivo);
+          }
+        
+          carrusel.addEventListener("slid.bs.carousel", function (event) {
+            cargarIframeVisible(event.relatedTarget);
+          });
+        }
+        </script>
 
 </body>
 
