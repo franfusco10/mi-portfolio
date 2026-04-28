@@ -120,6 +120,12 @@
                 <p class="texto-galeria">
                     Click en la imagen para ver la galería
                 </p>
+
+                <a href="portfolio.html#trabajos" class="btn btn-primary boton-volver-proyectos">
+                    Volver a proyectos
+                </a>
+
+
             </section>
 
         </section>
@@ -164,13 +170,9 @@
                             </div>
 
                             <div class="carousel-item">
-                                <iframe
-                                    class="iframe-figma-modelado"
-                                    width="100%"
-                                    height="600"
+                                <iframe class="iframe-figma-modelado" width="100%" height="600"
                                     data-src="https://embed.figma.com/proto/NteqBw3p2KgP0CkczzE7QA/BosteroSoy?node-id=2-2&starting-point-node-id=105%3A11&embed-host=share"
-                                    title="Frame de Figma bosterosoy"
-                                    allowfullscreen>
+                                    title="Frame de Figma bosterosoy" allowfullscreen>
                                 </iframe>
                             </div>
 
@@ -199,25 +201,25 @@
 
     <script>
         function cargarIframeVisible(slide) {
-          const iframe = slide.querySelector(".iframe-figma-modelado[data-src]");
-          if (iframe && !iframe.getAttribute("src")) {
-            iframe.setAttribute("src", iframe.dataset.src);
-          }
+            const iframe = slide.querySelector(".iframe-figma-modelado[data-src]");
+            if (iframe && !iframe.getAttribute("src")) {
+                iframe.setAttribute("src", iframe.dataset.src);
+            }
         }
-        
+
         const carrusel = document.getElementById("carouselBosterosoy");
-        
+
         if (carrusel) {
-          const slideActivo = carrusel.querySelector(".carousel-item.active");
-          if (slideActivo) {
-            cargarIframeVisible(slideActivo);
-          }
-        
-          carrusel.addEventListener("slid.bs.carousel", function (event) {
-            cargarIframeVisible(event.relatedTarget);
-          });
+            const slideActivo = carrusel.querySelector(".carousel-item.active");
+            if (slideActivo) {
+                cargarIframeVisible(slideActivo);
+            }
+
+            carrusel.addEventListener("slid.bs.carousel", function (event) {
+                cargarIframeVisible(event.relatedTarget);
+            });
         }
-        </script>
+    </script>
 
 </body>
 

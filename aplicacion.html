@@ -120,6 +120,12 @@
                 <p class="texto-galeria">
                     Click en la imagen para ver la galería
                 </p>
+
+                <a href="portfolio.html#trabajos" class="btn btn-primary boton-volver-proyectos">
+                    Volver a proyectos
+                </a>
+
+
             </section>
 
         </section>
@@ -132,43 +138,41 @@
     <div class="modal fade" id="modalGaleriaSkate" tabindex="-1">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-    
+
                 <div class="modal-body">
                     <div id="carouselSkate" class="carousel slide carousel-fade">
-    
+
                         <div class="carousel-inner">
-    
+
                             <!-- Imagen -->
                             <div class="carousel-item active">
                                 <img src="img/imagen-aplicación.png" class="d-block w-100" alt="Imagen Skate">
                             </div>
-    
+
                             <!-- Figma -->
                             <div class="carousel-item">
-                                <iframe
-                                    class="iframe-figma-modelado"
-                                    width="100%"
-                                    height="600"
+                                <iframe class="iframe-figma-modelado" width="100%" height="600"
                                     data-src="https://embed.figma.com/proto/RRy0LffNWIy91ucavyPCIb/skateboard-web?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=2-24&starting-point-node-id=2%3A24&embed-host=share"
-                                    title="Frame de Figma Skateboard"
-                                    allowfullscreen>
+                                    title="Frame de Figma Skateboard" allowfullscreen>
                                 </iframe>
                             </div>
-    
+
                         </div>
-    
+
                         <!-- BOTONES -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSkate" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSkate"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-    
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSkate" data-bs-slide="next">
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSkate"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
-    
+
                     </div>
                 </div>
-    
+
             </div>
         </div>
     </div>
@@ -178,26 +182,26 @@
     <script>
         function cargarIframeVisible(slide) {
             const iframe = slide.querySelector(".iframe-figma-modelado[data-src]");
-        
+
             if (iframe && !iframe.getAttribute("src")) {
                 iframe.setAttribute("src", iframe.dataset.src);
             }
         }
-        
+
         const carouselSkate = document.getElementById("carouselSkate");
-        
+
         if (carouselSkate) {
             const slideActivo = carouselSkate.querySelector(".carousel-item.active");
-        
+
             if (slideActivo) {
                 cargarIframeVisible(slideActivo);
             }
-        
+
             carouselSkate.addEventListener("slid.bs.carousel", function (event) {
                 cargarIframeVisible(event.relatedTarget);
             });
         }
-        </script>
+    </script>
 
 </body>
 

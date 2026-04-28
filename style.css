@@ -32,7 +32,7 @@
 
 /* ANIMACIÓN DE LINEA PUNTEADA */
 
-.marco::before{
+.marco::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -47,8 +47,8 @@
     animation: mover-punteado 0.8s linear infinite;
 }
 
-@keyframes mover-punteado{
-    from{
+@keyframes mover-punteado {
+    from {
         background-position:
             0 0,
             0 100%,
@@ -56,7 +56,7 @@
             100% 0;
     }
 
-    to{
+    to {
         background-position:
             -16px 0,
             16px 100%,
@@ -185,7 +185,7 @@
 .mi-nav-personalizada .navbar-nav {
     margin-left: 5% !important;
 }
-
+/* TIPOGRAFIA NAVBAR */
 .mi-nav-personalizada .nav-link {
     color: #9C9C9C !important;
     font-family: 'IBM Plex Mono', monospace;
@@ -195,7 +195,7 @@
     margin-inline: 0 25px;
     text-transform: capitalize;
 }
-
+/* HOVER LETRAS NAVBAR */
 .mi-nav-personalizada .nav-link:hover {
     color: #62BA1B !important;
 }
@@ -222,9 +222,9 @@
 
 .sobre-mi {
     min-height: calc(100vh - 100px);
-    /* hace q reste altura del navbar que tengo */
+    /*  define la altuna mínima (hace que la sección ocupe toda la pantalla), hace q reste altura del navbar que tengo */
     display: flex;
-    align-items: center;
+    align-items: center; /* (centra verticalmente los elementos dentro del flex) */
 }
 
 .contenido {
@@ -240,30 +240,30 @@
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 80px;
-    line-height: 1.1;
+    line-height: 1.1; /* (separación entre lineas del texto) */
 }
 
 .linea {
     display: block;
     width: 100%;
-    max-width: 550px;
-    height: 2px;
+    max-width: 550px; /* (ancho de línea) */
+    height: 2px; /* (grosor de linea) */
     background-color: #1B1B1B;
-    margin: 20px 0 30px;
+    margin: 30px 0 30px;
 }
 
 .descripción {
     font-family: "IBM Plex Mono", monospace;
     color: #1B1B1B;
-    max-width: 400px;
+    max-width: 400px; /* (limita el ancho máximo, hace que el texto no sea largo) */
     margin-bottom: 30px;
 }
 
 /* REDES SOCIALES */
 
 .red {
-    display: flex;
-    align-items: center;
+    display: flex; /* (pone icono y texto en línea) */
+    align-items: center; /* (los centra verticalmente) */
     margin-bottom: 15px;
 }
 
@@ -274,6 +274,7 @@
 
 .red span {
     font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
     color: #1B1B1B;
 }
 
@@ -285,17 +286,17 @@
     border: 4px solid #62BA1B;
     border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
+    align-items: center; /* (centra verticalmente) */
+    justify-content: center; /* (centra horizontalmente) */
+    margin-left: auto; /* (hace que la foto se vaya para la derecha de la columna) */
     margin-right: 0;
-    overflow: hidden;
+    overflow: hidden; /* (corta la imagen para que quede circular) */
 }
 
 .foto {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* (hace que la imagen no se deforme y ocupe todo el circulo) containt hace que entre toda pero puede dejar espacios */
 }
 
 /* HABILIDADES */
@@ -315,7 +316,7 @@
 .titulo-separatorios {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
-    font-size: clamp(40px, 8vw, 100px);
+    font-size: clamp(40px, 8vw, 100px); /* (se adapta al responsive) */
     margin: 40px 0 10px;
 }
 
@@ -334,18 +335,18 @@
 }
 
 .programas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 55px 130px;
+    display: grid; /* (organiza bloques grandes) */
+    grid-template-columns: repeat(2, 1fr); /* (hace las dos columnas iguales de programas, cada 1fr una fracción del espacio disponible)  */
+    gap: 55px 130px; /* (55px espacio entre las aplicaciones verticalmente) (130px espacio entre las aplicaciones horizontalmente) */
     max-width: 850px;
-    margin-left: 90px;
-    margin-bottom: 120px;
+    margin-left: 90px; /* (margen izquierdo de los programas) */
+    margin-bottom: 120px; /* (margen de abajo de los programas) */
 }
 
 .programa {
-    display: flex;
+    display: flex; /* (organiza icono + texto) */
     align-items: center;
-    gap: 22px;
+    gap: 22px; /* (espacio entre el ícono del programa y el texto de la derecha) */
 }
 
 .icono-programa {
@@ -356,7 +357,7 @@
 
 .info-programa {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* (Cambia la dirección del flex, por defecto viene horizontalmente, con column el texto Blender, los puntitos y la línea quedan apliados verticalmente) */
 }
 
 .nombre-programa {
@@ -370,7 +371,7 @@
 .nivel {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 4px; /* (Separa los puntos horizontalmente) */
     margin-bottom: 12px;
 }
 
@@ -379,7 +380,7 @@
     height: 13px;
     border: 1.5px solid #62BA1B;
     border-radius: 50%;
-    display: inline-block;
+    display: inline-block; /* (Se corportan como texto en línea, pero se le puede dar tamaño con width / height) (solo inline NO porque no permite usar width ni height) */
     background-color: transparent;
 }
 
@@ -388,7 +389,7 @@
     height: 13px;
     border: 1.5px solid #62BA1B;
     border-radius: 50%;
-    display: inline-block;
+    display: inline-block; /* (Se corportan como texto en línea, pero se le puede dar tamaño con width / height) (solo inline NO porque no permite usar width ni height) */
     background-color: #62BA1B;
 }
 
@@ -402,14 +403,14 @@
     max-width: 850px;
     margin-left: 90px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* (Permite que los elementos salten de línea, sino quedan todas las habilidades en la misma linea) */
     gap: 20px 24px;
 }
 
 .etiqueta-habilidad {
     border: 2px solid #62BA1B;
-    border-radius: 999px;
-    padding: 8px 18px;
+    border-radius: 999px; /* (hace el borde circular) */
+    padding: 8px 18px; /* (8 px es para el espacio de arriba y abajo, 18 para el espacio de los costados) */
     font-family: "IBM Plex Mono", monospace;
     font-size: 17px;
     font-weight: 700;
@@ -429,16 +430,16 @@
     width: 627px;
     height: 420px;
     margin: 0 auto;
-    transform: scale(1.8);
-    transform-origin: top center;
+    transform: scale(1.8); /* (Aumenta el tamaño de las imagenes, hace un zoom, pero es visual y no cambia el layout) */
+    transform-origin: top center; /* (Define de donde crece el scale, si tuviera center center crece desde el centro, pero como tengo top center, crece desde arriba hacia abajo y no se rompe el layout) */
 }
 
 /* cajas grales */
 
 .proyecto {
-    position: absolute;
-    display: block;
-    overflow: hidden;
+    position: absolute; /* Funciona porque arriba que es el padre usé relativa, eso hace que el absolute se posicione dentro del contenedor */
+    display: block; /* Hace que la imagen ocupe todo el contenedor, además hace que el texto baje a la siguiente linea */
+    overflow: hidden; /* Hace que la imagen no salga del borde del card de bootstrap, respetando los bordes redondos */
     background-color: #d9d9d9;
     text-decoration: none;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.315);
@@ -450,7 +451,7 @@
 .imagen-proyecto {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* (Hace que la imagen ocupe todo el contenedor, sin que se deforme) */
     display: block;
     transition: filter 0.3s ease;
 }
@@ -460,7 +461,7 @@
     height: 100%;
     border: none;
     border-radius: 0 !important;
-    overflow: hidden;
+    overflow: hidden; /* Hace que la imagen no salga del borde del card de bootstrap, respetando los bordes redondos */
     background-color: transparent !important;
 }
 
@@ -512,9 +513,9 @@
     font-size: 11px;
     font-weight: 800;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
-    z-index: 2;
+    z-index: 2; /* Controla que los números estén por encima del circulo verde y de la imagen */
 }
 
 /* posiciones de las imagenes */
@@ -583,7 +584,7 @@
 }
 
 .titulo-contacto {
-    display: inline-block;
+    display: inline-block; /* (Se corportan como texto en línea, pero se le puede dar tamaño con width / height) (solo inline NO porque no permite usar width ni height) */
     border: 2px solid #62BA1B;
     border-radius: 999px;
     padding: 16px 36px;
@@ -597,8 +598,8 @@
 /* Formulario contacto */
 
 .formulario-contacto {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Pone el formulario en linea horizontalmente*/
+    flex-direction: column; /* (con column el formulario queda apilado verticalmente) */
     gap: 35px;
     align-items: center;
 }
@@ -620,9 +621,10 @@
     resize: none;
 }
 
+/* Sombra debajo de formulario  */
 .form-control:focus {
     border-color: transparent !important;
-    box-shadow: 0 0 12px rgba(115, 255, 0, 0.89);
+    box-shadow: 0 0 12px rgba(115, 255, 0, 0.89); 
     background-color: #E6E6E6;
     color: #1B1B1B;
     outline: none;
@@ -652,7 +654,7 @@
 /* Botón cerrar segundo modal - contacto */
 
 .btn-exito {
-    background-color: #62BA1B;
+    background-color: #55ba1b;
     color: white;
     border: none;
     padding: 8px 20px;
@@ -677,20 +679,20 @@
 }
 
 .detalle-proyecto {
-    position: relative;
+    position: relative; /* Se pone position relativa para que luego cuando ponga position absolute esté dentro de esta clase y no en toda la pantalla */
     padding-top: 160px;
     padding-bottom: 110px;
     min-height: 100vh;
 }
 
 .contenido-proyecto {
-    width: 100%;
-    max-width: 500px;
-    margin-left: clamp(40px, 8vw, 170px);
+    width: 100%; /* Se adapta al contenedor completo */
+    max-width: 500px; /* Pero no pasa de 500px */
+    margin-left: clamp(40px, 8vw, 170px); /* Margen que se adapta al responsive, mínimo (40px), valor flexible (8vw), máximo (170px) */
 }
 
 .numero-proyectos {
-    width: 42px;
+    width: 42px; /* Ocupa solamente 42px del contenedor */
     height: 42px;
     border: 2px solid #62BA1B;
     border-radius: 50%;
@@ -698,7 +700,7 @@
     font-family: "IBM Plex Mono", monospace;
     font-size: 16px;
     font-weight: 700;
-    display: flex;
+    display: flex; /* Pone el número en linea horizontalmente */
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
@@ -707,21 +709,21 @@
 .titulo-proyecto {
     color: white;
     font-family: "Raleway", sans-serif;
-    font-size: clamp(56px, 5vw, 88px);
+    font-size: clamp(56px, 5vw, 88px); /* Se adapta el título al responsive */
     font-weight: 800;
-    line-height: 0.94;
+    line-height: 0.94; /* Separación entre líneas de texto */
     margin-bottom: 42px;
 }
 
 .titulo-proyecto span {
-    display: block;
+    display: block; /* Hace que el título ocupe todo el contenedor, además hace que el texto baje a la siguiente linea */
 
 }
 
 .datos-proyecto {
-    display: flex;
-    gap: 28px;
-    margin-bottom: 34px;
+    display: flex; /* Pone el los datos en linea horizontalmente */
+    gap: 28px; /* Espacio entre datos */
+    margin-bottom: 34px; /* Margen de abajo con la línea */
 }
 
 .dato {
@@ -729,7 +731,7 @@
 }
 
 .etiqueta-dato {
-    display: inline-block;
+    display: inline-block; /* (Se corportan como texto en línea, pero se le puede dar tamaño con width / height) (solo inline NO porque no permite usar width ni height) */ 
     padding: 7px 18px;
     border: 2px solid #62BA1B;
     border-radius: 999px;
@@ -751,11 +753,11 @@
 }
 
 .texto-dato span {
-    display: block;
+    display: block; /* Hace que el texto baje de línea (animación 2D Y 3D) */
 }
 
 .linea-detalle {
-    display: block;
+    display: block; /* Hace que la línea se pueda ver porque ocupa todo el contenedor */
     width: 100%;
     max-width: 430px;
     height: 2px;
@@ -772,21 +774,33 @@
     max-width: 430px;
 }
 
+.boton-volver-proyectos {
+    margin-top: 45px;
+    max-width: 360px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.vista-previa-proyecto .boton-volver-proyectos {
+    margin-left: auto;
+    margin-right: 0;
+}
+
 /* Imagen vista previa Up */
 
 .vista-previa-proyecto {
-    position: absolute;
-    top: 260px;
-    right: clamp(40px, 8vw, 200px);
-    width: min(42vw, 720px);
+    position: absolute; /* Funciona porque arriba que es el padre usé relativa, eso hace que el absolute se posicione dentro del contenedor */
+    top: 200px; /* Distancia de separación con la parte de arriba de la página */
+    right: clamp(40px, 8vw, 200px); 
+    width: min(42vw, 720px); /* para que la imagen se adapte al tamaño del width en el responsive */
 }
 
 .imagen-proyecto {
     background-color: black;
     border: none;
     padding: 0;
-    cursor: pointer;
-    width: 100%;
+    cursor: pointer; /* Cambia el cursor a la manito del mouse */
+    width: 100%; /* Para que la imagen ocupe el 100% del contenedor */
 }
 
 .imagen-proyecto img {
@@ -800,8 +814,8 @@
 /* Imagen se agranda */
 
 .imagen-proyecto:hover img {
-    transform: scale(1.02);
-    filter: brightness(0.85);
+    transform: scale(1.02); /* se agranda cuando pones el cursor por encima de la imagen */
+    filter: brightness(0.85); /* leve sombrita */
 }
 
 /* texto debajo de imagen */
@@ -838,7 +852,7 @@
 /* body del modal */
 
 .modal-body {
-    padding: 0;
+    padding: 0; 
 }
 
 /* imagenes del carrusel más grande */
@@ -846,7 +860,7 @@
 .carousel-item img {
     width: 100%;
     height: 80vh;
-    object-fit: cover;
+    object-fit: cover; /* (Hace que la imagen ocupe todo el contenedor, sin que se deforme) */
 }
 
 /* Script de Figma dentro del carrusel */
@@ -1469,6 +1483,19 @@
     .carousel-inner {
         border-radius: 12px;
     }
+
+    .boton-volver-proyectos {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    .vista-previa-proyecto .boton-volver-proyectos {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
 }
 
 @media (max-width: 480px) {

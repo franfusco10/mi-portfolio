@@ -120,6 +120,11 @@
                 <p class="texto-galeria">
                     Click en la imagen para ver la galería
                 </p>
+
+                <a href="portfolio.html#trabajos" class="btn btn-primary boton-volver-proyectos">
+                    Volver a proyectos
+                </a>
+
             </section>
 
         </section>
@@ -129,8 +134,7 @@
 
     <!-- Modal más carrusel -->
 
-<div class="modal fade" id="modalGaleriaTrueno" tabindex="-1" aria-labelledby="modalTruenoLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="modalGaleriaTrueno" tabindex="-1" aria-labelledby="modalTruenoLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
 
@@ -142,20 +146,16 @@
                                 <img src="img/imagenes trueno/trueno 1.png" class="d-block w-100"
                                     alt="Imagen 1 del proyecto bosterosoy">
                             </div>
-                            
+
                             <div class="carousel-item">
                                 <img src="img/imagenes trueno/trueno 2.png" class="d-block w-100"
                                     alt="Imagen 2 del proyecto bosterosoy">
                             </div>
 
                             <div class="carousel-item">
-                                <iframe
-                                    class="iframe-figma-modelado"
-                                    width="100%"
-                                    height="600"
+                                <iframe class="iframe-figma-modelado" width="100%" height="600"
                                     data-src="https://embed.figma.com/proto/W9W2TOxTqG2MM3KlCUImPv/Pagina-web---Trueno?node-id=115-315&starting-point-node-id=115%3A315&embed-host=share"
-                                    title="Frame de Figma Trueno"
-                                    allowfullscreen>
+                                    title="Frame de Figma Trueno" allowfullscreen>
                                 </iframe>
                             </div>
 
@@ -185,21 +185,21 @@
     <script>
         function cargarIframeVisible(slide) {
             const iframe = slide.querySelector(".iframe-figma-modelado[data-src]");
-    
+
             if (iframe && !iframe.getAttribute("src")) {
                 iframe.setAttribute("src", iframe.dataset.src);
             }
         }
-    
+
         const carouselTrueno = document.getElementById("carouselTrueno");
-    
+
         if (carouselTrueno) {
             const slideActivo = carouselTrueno.querySelector(".carousel-item.active");
-    
+
             if (slideActivo) {
                 cargarIframeVisible(slideActivo);
             }
-    
+
             carouselTrueno.addEventListener("slid.bs.carousel", function (event) {
                 cargarIframeVisible(event.relatedTarget);
             });
